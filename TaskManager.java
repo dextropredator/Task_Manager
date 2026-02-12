@@ -1,8 +1,10 @@
 
-
+//import java.nio.*;
+import java.util.*;
 
 
 class Task{
+    
     String name ;
     boolean completion ;
     String Date;
@@ -10,6 +12,7 @@ class Task{
     public void completedTask(){
         completion = true ;
         priorty =0;
+        
         System.out.println("Congratulations You have completed "+name+" successfully !!");
     }
      
@@ -21,7 +24,7 @@ class Task{
 
 public class TaskManager {
     public static void main(String[] args) {
-    // Scanner scan = new Scanner(System.in);
+    Scanner scan = new Scanner(System.in);
     Task t1 = new Task();
     t1.Date="11/02/2026";
     t1.completion = false;
@@ -32,5 +35,6 @@ public class TaskManager {
     System.out.println(t1.name);
     System.out.println("completion status :"+t1.completion);  
     System.out.print(t1.priorty);  
+    scan.close();
     }
 }
