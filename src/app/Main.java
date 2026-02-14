@@ -1,7 +1,7 @@
 
 
-package src.app;
-import src.model.*;
+package app;
+import model.*;
 class Main{
     public static void main(String[] args) {
         Task t1 = new Task("Test", "09/02/2026", 1) ;

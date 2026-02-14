@@ -1,11 +1,11 @@
-package src.model;
+package model;
 
 public class Task {
     String name;
     String startingDate;
     String completionDate;
     boolean runningTask;
-    int priorty;
+    int priority;
 
     /*
      * 0 for default.
@@ -16,7 +16,7 @@ public class Task {
      startingDate = null;
      completionDate = null;
      runningTask = false;
-    priorty = 0;
+    priority = 0;
 
     }
     public void completedTask(String x) {
@@ -29,15 +29,15 @@ public class Task {
     public Task(String str1, String str2, int x) {
         name = str1;
         startingDate = str2;
-        priorty = x;
+        priority = x;
         completionDate = "not yet";
     }
 
     public Task(String str1, String str2, int x, boolean n) {
         name = str1;
         startingDate = str2;
-        priorty = x;
-        runningTask = true;
+        priority = x;
+        runningTask = n;
         completionDate = "not yet";
     }
 
@@ -60,7 +60,7 @@ public class Task {
         return name;
     }
     public int getPriority(){
-        return priorty;
+        return priority;
     }
         
 
@@ -69,14 +69,14 @@ public class Task {
     public void setName(String x){
         name = x;
     }
-    public void startingDate(String x){
+    public void setStartingDate(String x){
         startingDate = x;
     }
-    public void setcompletionDate(String x){
+    public void setCompletionDate(String x){
         completionDate = x;
     }
 public void setPriority(int x ){
-        priorty =x ;
+        priority =x ;
     }
 
 }
