@@ -11,14 +11,15 @@ public class Task {
      * 0 for default.
      * +ve priority for normal tasks.
      */
-    public Task(){
-         name=null;
-     startingDate = null;
-     completionDate = null;
-     runningTask = false;
-    priority = 0;
+    public Task() {
+        name = null;
+        startingDate = null;
+        completionDate = null;
+        runningTask = false;
+        priority = 0;
 
     }
+
     public void completedTask(String x) {
         completionDate = x;
         runningTask = false;
@@ -45,8 +46,7 @@ public class Task {
         System.out.println(
                 "Task : " + name + "\n" + "starting Date : " + startingDate + "\nCompletion date :" + completionDate);
     }
-      //    Getters
-
+    // Getters
 
     public String getCompletionDate() {
         return completionDate;
@@ -59,25 +59,27 @@ public class Task {
     public String getName() {
         return name;
     }
-    public int getPriority(){
+
+    public int getPriority() {
         return priority;
     }
-        
 
     // setters
 
-    public void setName(String x){
+    public void setName(String x) {
         name = x;
     }
-    public void setStartingDate(String x){
+
+    public void setStartingDate(String x) {
         startingDate = x;
     }
-    public void setCompletionDate(String x){
+
+    public void setCompletionDate(String x) {
         completionDate = x;
     }
-public void setPriority(int x ){
-        priority =x ;
+
+    public void setPriority(int x) {
+        priority = x;
     }
 
 }
-
