@@ -2,10 +2,10 @@ package model;
 
 public class Task {
     private String name;
-   private String startingDate;
-   private String completionDate;
-   private boolean runningTask;
-   private int priority;
+    private String startingDate;
+    private String completionDate;
+
+    private int priority;
 
     /*
      * 0 for default.
@@ -15,14 +15,13 @@ public class Task {
         name = null;
         startingDate = null;
         completionDate = null;
-        runningTask = false;
+
         priority = 0;
 
     }
 
     public void completedTask(String x) {
         completionDate = x;
-        runningTask = false;
 
         System.out.println("COngrataions!!! You have done it.");
     }
@@ -34,15 +33,6 @@ public class Task {
         completionDate = "not yet";
     }
 
-    public Task(String str1, String str2, int x, boolean n) {
-        name = str1;
-        startingDate = str2;
-        priority = x;
-        runningTask = n;
-        completionDate = "not yet";
-    }
-
-  
     // Getters
 
     public String getCompletionDate() {
