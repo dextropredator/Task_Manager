@@ -4,17 +4,18 @@ import model.Task;
 import java.util.*;
 
 class TaskManager extends Task {
-    Vector<Task> Tasks = new Vector<>();
+    Vector<Task> tasks = new Vector<>();
     Scanner sc = new Scanner(System.in);
-    void createTask(){
+
+    void createTask() {
         System.out.println("enter name of the task: \n");
-            String na = sc.next();
-            System.out.println("enter priority:\n");
-            int temp = sc.nextInt();
-            System.out.println("enter Starting date:\n");
-            String st = sc.next();
-            Task g = new Task(na, st, temp);
-            Tasks.add(g);
+        String na = sc.next();
+        System.out.println("enter priority:\n");
+        int temp = sc.nextInt();
+        System.out.println("enter Starting date:\n");
+        String st = sc.next();
+        Task g = new Task(na, st, temp);
+        tasks.add(g);
     }
 
     void createTasks() {
@@ -23,21 +24,24 @@ class TaskManager extends Task {
         int nu = sc.nextInt();
         if (nu == 1) {
             createTask();
-        }
-        else{
-            for(int i =1 ;i>=nu;i++){
+        } else {
+            for (int i = 1; i >= nu; i++) {
                 System.out.printf(" %dth Task :  ");
                 createTask();
             }
         }
 
     }
-    void deleteTask(){
+
+    void deleteTask() {
         System.out.println(" enter name of Task");
-        String  temp = sc.next();
-        for (Task task : Tasks) {
-            if(task.getName().equals(temp)) {
-                Tasks.remove(task);
+        String temp = sc.next();
+        Iterator<Task> it = tasks.iterator();
+
+        while (it.hasNext()) {
+            Task task = it.next();
+            if (task.getName().equals(temp)) {
+                it.remove();
             }
         }
     }

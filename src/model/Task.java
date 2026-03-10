@@ -1,11 +1,11 @@
 package model;
 
 public class Task {
-    String name;
-    String startingDate;
-    String completionDate;
-    boolean runningTask;
-    int priority;
+    private String name;
+   private String startingDate;
+   private String completionDate;
+   private boolean runningTask;
+   private int priority;
 
     /*
      * 0 for default.
@@ -42,10 +42,7 @@ public class Task {
         completionDate = "not yet";
     }
 
-    public void show() {
-        System.out.println(
-                "Task : " + name + "\n" + "starting Date : " + startingDate + "\nCompletion date :" + completionDate);
-    }
+  
     // Getters
 
     public String getCompletionDate() {
