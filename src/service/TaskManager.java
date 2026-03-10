@@ -3,7 +3,7 @@ package service;
 import model.Task;
 import java.util.*;
 
-class TaskManager  {
+public class TaskManager   {
     List<Task> tasks = new ArrayList<>();
     Scanner sc = new Scanner(System.in);
 
@@ -37,12 +37,13 @@ class TaskManager  {
         System.out.println(" enter name of Task");
         String temp = sc.next();
         Iterator<Task> it = tasks.iterator();
-
         while (it.hasNext()) {
             Task task = it.next();
             if (task.getName().equals(temp)) {
                 it.remove();
             }
         }
+        
     }
+    
 }

@@ -12,9 +12,9 @@ public class Task {
      * +ve priority for normal tasks.
      */
     public Task() {
-        name = null;
-        startingDate = null;
-        completionDate = null;
+        name ="";
+        startingDate = "";
+        completionDate = "";
 
         priority = 0;
 
@@ -22,8 +22,6 @@ public class Task {
 
     public void completedTask(String x) {
         completionDate = x;
-
-        System.out.println("COngrataions!!! You have done it.");
     }
 
     public Task(String str1, String str2, int x) {
