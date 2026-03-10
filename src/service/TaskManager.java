@@ -2,6 +2,7 @@ package service;
 
 import model.Task;
 import java.util.*;
+import java.io.*;
 
 public class TaskManager   {
     List<Task> tasks = new ArrayList<>();
@@ -13,6 +14,7 @@ public class TaskManager   {
 
         System.out.println("enter priority:\n");
         int temp = sc.nextInt();
+        sc.nextLine();
 
         System.out.println("enter Starting date:\n");
         String st = sc.nextLine();
@@ -25,6 +27,7 @@ public class TaskManager   {
 
         System.out.println("Enter no of Tasks :\n");
         int nu = sc.nextInt();
+        sc.nextLine();
         if (nu == 1) {
             createTask();
         } else {
@@ -48,5 +51,31 @@ public class TaskManager   {
         }
         
     }
+    public void saveTasksToFile() {
+
+    tasks.sort(Comparator.comparingInt(Task::getPriority));
+
+    try {
+        FileWriter fw = new FileWriter("tasks.txt");
+
+        for (Task t : tasks) {
+
+            fw.write(String.format(
+                "%-20s %-20s %-20s %5d\n",
+                t.getName(),
+                t.getStartingDate(),
+                t.getCompletionDate(),
+                t.getPriority()
+            ));
+
+        }
+
+        fw.close();
+        System.out.println("Tasks saved.");
+
+    } catch (IOException e) {
+        System.out.println("File error.");
+    }
+}
     
 }

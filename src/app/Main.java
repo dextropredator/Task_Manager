@@ -21,6 +21,7 @@ public class Main {
             System.out.print("Choose option: ");
 
             int choice = sc.nextInt();
+            
 
             switch (choice) {
 
@@ -34,13 +35,15 @@ public class Main {
 
                 case 3:
                     System.out.println("Exiting program...");
+                    manager.saveTasksToFile();
+                    
                     return;
 
                 default:
                     System.out.println("Invalid option.");
                     
             }
-            sc.close();
+            
         }
 
        
