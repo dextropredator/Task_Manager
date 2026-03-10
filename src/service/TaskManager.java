@@ -16,7 +16,7 @@ public class TaskManager   {
 
         System.out.println("enter Starting date:\n");
         String st = sc.nextLine();
-        
+
         Task g = new Task(na, st, temp);
         tasks.add(g);
     }
@@ -29,7 +29,7 @@ public class TaskManager   {
             createTask();
         } else {
             for (int i = 1; i <= nu; i++) {
-                System.out.printf(" %dth Task :  ",i);
+                System.out.printf(" %dth Task : \n ",i);
                 createTask();
             }
         }
@@ -37,7 +37,7 @@ public class TaskManager   {
     }
 
     public void deleteTask() {
-        System.out.println(" enter name of Task");
+        System.out.println(" enter name of Task\n");
         String temp = sc.nextLine();
         Iterator<Task> it = tasks.iterator();
         while (it.hasNext()) {
