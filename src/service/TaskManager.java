@@ -4,7 +4,7 @@ import model.Task;
 import java.util.*;
 
 class TaskManager  {
-    Vector<Task> tasks = new Vector<>();
+    List<Task> tasks = new ArrayList<>();
     Scanner sc = new Scanner(System.in);
 
     void createTask() {
@@ -26,7 +26,7 @@ class TaskManager  {
             createTask();
         } else {
             for (int i = 1; i >= nu; i++) {
-                System.out.printf(" %dth Task :  ");
+                System.out.printf(" %dth Task :  ",i);
                 createTask();
             }
         }
