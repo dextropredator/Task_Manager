@@ -3,7 +3,7 @@ package service;
 import model.Task;
 import java.util.*;
 
-class TaskManager extends Task {
+class TaskManager  {
     Vector<Task> tasks = new Vector<>();
     Scanner sc = new Scanner(System.in);
 
