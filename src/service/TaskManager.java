@@ -9,23 +9,26 @@ public class TaskManager   {
 
     void createTask() {
         System.out.println("enter name of the task: \n");
-        String na = sc.next();
+        String na = sc.nextLine();
+
         System.out.println("enter priority:\n");
         int temp = sc.nextInt();
+
         System.out.println("enter Starting date:\n");
-        String st = sc.next();
+        String st = sc.nextLine();
+        
         Task g = new Task(na, st, temp);
         tasks.add(g);
     }
 
-    void createTasks() {
+    public void createTasks() {
 
         System.out.println("Enter no of Tasks :\n");
         int nu = sc.nextInt();
         if (nu == 1) {
             createTask();
         } else {
-            for (int i = 1; i >= nu; i++) {
+            for (int i = 1; i <= nu; i++) {
                 System.out.printf(" %dth Task :  ",i);
                 createTask();
             }
@@ -33,9 +36,9 @@ public class TaskManager   {
 
     }
 
-    void deleteTask() {
+    public void deleteTask() {
         System.out.println(" enter name of Task");
-        String temp = sc.next();
+        String temp = sc.nextLine();
         Iterator<Task> it = tasks.iterator();
         while (it.hasNext()) {
             Task task = it.next();
